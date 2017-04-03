@@ -7,19 +7,107 @@
 //
 
 import UIKit
-
+import AVFoundation
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+    
+ 
+    @IBOutlet weak var outputlabl: UILabel!
+    
+    var btnSound: AVAudioPlayer!
+    
+    var runningNumber = ""
+    var leftValStr = ""
+    var rightValStr = ""
+    var result = ""
+    
+    
+    enum Operation: String {
+       case  Divide  = "/"
+       case  Multiply = "*"
+       case  Substract = "-"
+       case  Add = "+"
+       case  Empty = "Empty"
+    }
+    
+     var currentOperation = Operation.Empty
+     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let path = Bundle.main.path(forResource: "btn", ofType: "wav")
+        let soundURL = URL(fileURLWithPath: path!)
+        
+        do {
+            try btnSound = AVAudioPlayer(contentsOf: soundURL)
+            btnSound.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+      outputlabl.text = "0"
+    }
+    @IBAction func numberpressed(sender: UIButton ){
+        btnSound.play()
+        runningNumber += "\(sender.tag)"
+        outputlabl.text = runningNumber
+    }
+    @IBAction func AddBtnPressed(_ sender: Any) {
+        operationProcess(operation: .Add)
+    }
+    @IBAction func SubstractBtnPressed(_ sender: Any) {
+        operationProcess(operation: .Substract)
+    }
+    @IBAction func MultiplyBtnPressed(_ sender: Any) {
+        operationProcess(operation: .Multiply)
+    }
+    @IBAction func DivideBtnPressed(_ sender: Any) {
+        operationProcess(operation: .Divide)
+    }
+    @IBAction func EqualBtnPressed(_ sender: Any) {
+        operationProcess(operation: currentOperation)
+    }
+    @IBAction func ClearBtn(_ sender: Any) {
+        currentOperation = Operation.Empty
+        outputlabl.text = "0"
+       return
+    }
+   
+    
+    func playSound() {
+        if btnSound.isPlaying{
+            btnSound.stop()
+        }
+        btnSound.play()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func operationProcess(operation: Operation) {
+        playSound()
+        if currentOperation != Operation.Empty {
+            if runningNumber != "" {
+                rightValStr = runningNumber
+                runningNumber = ""
+                
+                if currentOperation == Operation.Multiply {
+                    result = "\(Double(leftValStr)! * Double(rightValStr)!)"
+                }else if currentOperation == Operation.Divide{
+                    result = "\(Double(leftValStr)! / Double(rightValStr)!)"
+                }else if currentOperation == Operation.Substract{
+                    result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                }else if currentOperation == Operation.Add{
+                    result = "\(Double(leftValStr)! + Double(rightValStr)!)"
+                }
+                
+                leftValStr = result
+                outputlabl.text = result
+                
+            }
+            
+            currentOperation = operation
+        }else {
+            leftValStr = runningNumber
+            runningNumber = ""
+            currentOperation = operation
+        }
     }
-
-
 }
+
+
+
 

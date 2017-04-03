@@ -12,8 +12,9 @@
 		0797B17A1E08351E002B1F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797B1781E08351E002B1F4D /* Main.storyboard */; };
 		0797B17C1E08351E002B1F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0797B17B1E08351E002B1F4D /* Assets.xcassets */; };
 		0797B17F1E08351F002B1F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797B17D1E08351F002B1F4D /* LaunchScreen.storyboard */; };
-		0797B18A1E08351F002B1F4D /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797B1891E08351F002B1F4D /* calculatorTests.swift */; };
-		0797B1951E08351F002B1F4D /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797B1941E08351F002B1F4D /* calculatorUITests.swift */; };
+		07F84B661E08584C0019D558 /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07F84B651E08584C0019D558 /* btn.wav */; };
+		07F84B671E08584C0019D558 /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07F84B651E08584C0019D558 /* btn.wav */; };
+		07F84B681E08584C0019D558 /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07F84B651E08584C0019D558 /* btn.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +43,8 @@
 		0797B17E1E08351F002B1F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0797B1801E08351F002B1F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0797B1851E08351F002B1F4D /* calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0797B1891E08351F002B1F4D /* calculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorTests.swift; sourceTree = "<group>"; };
-		0797B18B1E08351F002B1F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0797B1901E08351F002B1F4D /* calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0797B1941E08351F002B1F4D /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
-		0797B1961E08351F002B1F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07F84B651E08584C0019D558 /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				0797B1731E08351E002B1F4D /* calculator */,
-				0797B1881E08351F002B1F4D /* calculatorTests */,
-				0797B1931E08351F002B1F4D /* calculatorUITests */,
 				0797B1721E08351E002B1F4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				0797B1741E08351E002B1F4D /* AppDelegate.swift */,
+				07F84B651E08584C0019D558 /* btn.wav */,
 				0797B1761E08351E002B1F4D /* ViewController.swift */,
 				0797B1781E08351E002B1F4D /* Main.storyboard */,
 				0797B17B1E08351E002B1F4D /* Assets.xcassets */,
@@ -105,24 +102,6 @@
 				0797B1801E08351F002B1F4D /* Info.plist */,
 			);
 			path = calculator;
-			sourceTree = "<group>";
-		};
-		0797B1881E08351F002B1F4D /* calculatorTests */ = {
-			isa = PBXGroup;
-			children = (
-				0797B1891E08351F002B1F4D /* calculatorTests.swift */,
-				0797B18B1E08351F002B1F4D /* Info.plist */,
-			);
-			path = calculatorTests;
-			sourceTree = "<group>";
-		};
-		0797B1931E08351F002B1F4D /* calculatorUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0797B1941E08351F002B1F4D /* calculatorUITests.swift */,
-				0797B1961E08351F002B1F4D /* Info.plist */,
-			);
-			path = calculatorUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +167,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Milos Mladenovic";
 				TargetAttributes = {
 					0797B1701E08351E002B1F4D = {
@@ -232,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F84B661E08584C0019D558 /* btn.wav in Resources */,
 				0797B17F1E08351F002B1F4D /* LaunchScreen.storyboard in Resources */,
 				0797B17C1E08351E002B1F4D /* Assets.xcassets in Resources */,
 				0797B17A1E08351E002B1F4D /* Main.storyboard in Resources */,
@@ -242,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F84B671E08584C0019D558 /* btn.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F84B681E08584C0019D558 /* btn.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0797B18A1E08351F002B1F4D /* calculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0797B1951E08351F002B1F4D /* calculatorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +313,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -383,6 +364,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -505,6 +487,7 @@
 				0797B19B1E08351F002B1F4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0797B19C1E08351F002B1F4D /* Build configuration list for PBXNativeTarget "calculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +496,7 @@
 				0797B19E1E08351F002B1F4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0797B19F1E08351F002B1F4D /* Build configuration list for PBXNativeTarget "calculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +505,7 @@
 				0797B1A11E08351F002B1F4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
